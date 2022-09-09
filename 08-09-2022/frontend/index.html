@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livro Caixa</title>
+    <link rel = "stylesheet" href= "style.css">
+</head>
+<body onload = "carregar()">
+
+    <header>
+        <h1>Livro Caixa</h1>
+        <div class = "opcoes-header">
+            <span>Filtro:</span>
+                <select class = "datas-lancamento">
+                    <option>...</option>
+                    <option class = "opcao-data">2022-09-08</option>
+                </select>
+
+            <span>Novo Lançamento</span>
+                <button onclick = "showModal()">+</button>
+        </div>
+        
+    </header>
+
+
+    <main>
+
+        
+        <div class = "tabelas debitos scroll">
+            <table class = "tabela-debitos">
+            <thead>
+                <caption class = "titulo-tabela">Débitos</caption>
+                <tr>
+                    <th>N-Lançamento</th>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class = "linha-tabela modelo">
+                    <td id = "n-lancamento">Teste</td>
+                    <td id = "data-lancamento">Teste</td>
+                    <td id = "descricao-lancamento">Teste</td>
+                    <td id = "valor-lancamento">Teste</td>
+                    <td id = "tipo-lancamento">Teste</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <div class = "tabelas creditos scroll">
+            <table class = "tabela-creditos">
+            <thead>
+                <caption class = "titulo-tabela">Créditos</caption>
+                <tr>
+                    <th>N-Lançamento</th>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class = "linha-tabela modelo">
+                    <td id = "n-lancamento">Teste</td>
+                    <td id = "data-lancamento">Teste</td>
+                    <td id = "descricao-lancamento">Teste</td>
+                    <td id = "valor-lancamento">Teste</td>
+                    <td id = "tipo-lancamento">Teste</td>
+                    
+                </tr>
+
+                    
+ 
+            </tbody>
+        </table>
+        </div>
+
+    </div>
+    </main>
+
+    <div class = "modal modelo">
+        <div class = "campo-cadastro">
+        <p>Criar novo lançamento</p>
+        <button onclick = "showModal()">X</button>
+        <hr>
+
+        <div class = "campo-lancamento">
+            <span>Descrição:</span>
+            <input type = "text" id = "descricao-lancamento-modal">
+            <span class="sinal-obrigatorio" aria-label="Campo obrigatório">*</span>
+        </div>
+
+        <div class = "campo-lancamento">
+            <span>Tipo:</span>
+            <select id = "tipo-lancamento-modal">
+                <option value = "" disabled selected>Selecione...</option>
+                <option value = "C">Entrada</option>
+                <option value = "D">Saída</option>
+            </select>
+            <span class="sinal-obrigatorio" aria-label="Campo obrigatório">*</span>
+        </div>
+
+        <div class = "campo-lancamento">
+            <span>Valor (R$):</span>
+            <input type="number" min = "1" id = "valor-lancamento-modal">
+            <span class="sinal-obrigatorio" aria-label="Campo obrigatório">*</span>
+        </div>
+
+        <div class = "campo-lancamento">
+            <button onclick = "adicionarLancamento()">Enviar</button>
+        </div>
+    </div>
+    </div>
+
+
+    <footer>
+        <h3>Saldo acumulado: </h3>
+    </footer>
+
+</body>
+
+<script src = "index.js"></script>
+</html>

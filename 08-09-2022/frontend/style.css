@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0.3vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header{
+    background-color: rgb(0, 145, 255);
+    color: white;
+    padding: 0;
+}
+
+html, body {
+    overflow: hidden;
+   }
+
+body{
+    border:rgb(0, 145, 255) 1px solid;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.opcoes-header{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.titulo-tabela{
+    padding: 0;
+    margin: 0;
+}
+
+caption{
+    color:rgb(0, 145, 255);
+    font-size: 20px;
+}
+
+table{
+    padding: 30px;
+
+}
+
+.tabelas{
+    display: flex;
+    justify-content: center;
+}
+
+th, td{
+    border: 1px solid #ccc;
+}
+
+
+.scroll{
+    height: 80vh;
+    width: 100vh;
+    overflow-y: scroll;
+}
+
+.linha-tabela{
+    padding: 0;
+}
+
+.modelo{
+    visibility: hidden;
+    display: none;
+}
+
+.modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.384);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.campo-cadastro{
+    height: 300px;
+    width: 450px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 1px rgba(0, 0, 0,);
+    padding: 20px;
+}
+
+.campo-lancamento{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sinal-obrigatorio {
+    color: #d93025;
+    padding-left: 0.25em;
+}
+
+
+footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color:rgb(0, 145, 255);
+}
+
