@@ -4,7 +4,7 @@ const mysql = require("mysql")
 
 const app = express()
 app.use(cors())
-
+app.use(express.json())
 const conexaoDB = mysql.createConnection({
     user: 'root',
     host: 'localhost',
@@ -51,7 +51,7 @@ app.get('/livrocaixa/lancamentos/creditos', ((req, res) => {
 app.post('/livrocaixa/lancamentos', (req, res) => {
     let data = new Date()
     let query = `INSERT INTO lancamentos VALUES (DEFAULT, '${(data.getFullYear() + "-" + ((data.getMonth() + 1)) + "-" + (data.getDate() ))}', '${req.body.descricao}', ${req.body.valor}, '${req.body.tipo}')`;
-    conDB.query(query, (err, result) => {
+    conexaoDB.query(query, (err, result) => {
         if(err == null) {
             res.status(201).json(req.body).end()
         }else {
@@ -60,6 +60,7 @@ app.post('/livrocaixa/lancamentos', (req, res) => {
     })
 }
 )
+
 
 
 app.listen(3000, () => {

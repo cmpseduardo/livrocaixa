@@ -7,15 +7,14 @@
     <title>Livro Caixa</title>
     <link rel = "stylesheet" href= "style.css">
 </head>
-<body onload = "carregar()">
+<body onload = "carregar(), carregarData()">
 
     <header>
         <h1>Livro Caixa</h1>
         <div class = "opcoes-header">
             <span>Filtro:</span>
                 <select class = "datas-lancamento">
-                    <option>...</option>
-                    <option class = "opcao-data">2022-09-08</option>
+                    <option class = "modelo" id = "opcao-data-lancamento">...</option>
                 </select>
 
             <span>Novo Lançamento</span>
@@ -85,9 +84,10 @@
 
     <div class = "modal modelo">
         <div class = "campo-cadastro">
-        <p>Criar novo lançamento</p>
-        <button onclick = "showModal()">X</button>
-        <hr>
+            <div class = "titulo-cadastro">
+                <p class = "titulo-modal">Criar novo lançamento</p>
+                <button onclick = "showModal()">X</button>
+         </div>
 
         <div class = "campo-lancamento">
             <span>Descrição:</span>
@@ -112,7 +112,7 @@
         </div>
 
         <div class = "campo-lancamento">
-            <button onclick = "adicionarLancamento()">Enviar</button>
+            <button onClick = "adicionarLancamento()">Enviar</button>
         </div>
     </div>
     </div>

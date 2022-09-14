@@ -13,7 +13,7 @@ CREATE TABLE lancamentos(
 DESCRIBE lancamentos;
 SHOW TABLES;
 
-LOAD DATA INFILE 'C:/Users/campo/Desktop/08-09-2022/docs/lancamentos.csv'
+LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/livrocaixa/08-09-2022/docs/lancamentos.csv'
 INTO TABLE lancamentos
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
@@ -21,8 +21,3 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
 SELECT * FROM lancamentos;
-
-SELECT SUM(valor) AS totalDebito FROM lancamentos WHERE tipo = "D";
-SELECT SUM(valor) AS totalCredito FROM lancamentos WHERE tipo = "C";
-
-SELECT totalCredito - totalDebito;
